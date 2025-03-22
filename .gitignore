@@ -29,7 +29,6 @@ public/*/*.*
 tmp
 temp
 .tmp
-yarn.lock
 
 .vscode/*
 !.vscode/settings.json
