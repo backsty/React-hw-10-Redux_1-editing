@@ -4,7 +4,7 @@ import svgr from 'vite-plugin-svgr';
 import path from 'path'
 
 export default defineConfig({
-  base: '/React-hw-10-Redux_1-editing_and_filter/',
+  base: '/React-hw-10-Redux_1-editing/',
   plugins: [react(), svgr()],
   resolve: {
     alias: {

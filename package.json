@@ -3,10 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://backsty.github.io/React-hw-10-Redux_1-editing_and_filter/",
+  "homepage": "https://backsty.github.io/React-hw-10-Redux_1-editing/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/backsty/React-hw-10-Redux_1-editing_and_filter.git"
+    "url": "git+https://github.com/backsty/React-hw-10-Redux_1-editing.git"
   },
   "scripts": {
     "dev": "vite --port 3000 --open",
