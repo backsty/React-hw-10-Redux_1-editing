@@ -1,0 +1,82 @@
+/* Главный CSS файл, который импортирует остальные */
+@import './reset.css';
+@import './variables.css';
+@import './App.css';
+@import './utils/helpers.css';
+@import './utils/animations.css';
+@import './components/item-form.css';
+@import './components/item-list.css';
+@import './components/item-row.css';
+
+/* Общие стили для всего приложения */
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Базовые стили для всех кнопок */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  font-weight: 500;
+  transition:
+    background-color 0.2s,
+    transform 0.1s,
+    opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Базовые стили для всех форм и полей ввода */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}

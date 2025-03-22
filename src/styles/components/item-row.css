@@ -1,0 +1,42 @@
+tr.editing {
+  background-color: rgba(var(--primary-rgb), 0.1) !important;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.btn-edit,
+.btn-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-fast);
+}
+
+.btn-edit:hover {
+  background-color: rgba(var(--primary-rgb), 0.1);
+}
+
+.btn-delete:hover {
+  background-color: rgba(var(--danger-color), 0.1);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.edit-icon {
+  fill: var(--primary-color);
+}
+
+.delete-icon {
+  fill: var(--danger-color);
+}

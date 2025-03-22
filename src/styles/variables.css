@@ -1,0 +1,48 @@
+:root {
+  /* Основные цвета */
+  --primary-color: #4a90e2;
+  --primary-rgb: 74, 144, 226;
+  --secondary-color: #50e3c2;
+  --success-color: #5cb85c;
+  --danger-color: #d9534f;
+  --warning-color: #f0ad4e;
+  --info-color: #5bc0de;
+
+  /* Цвета текста */
+  --text-color: #333;
+  --text-light: #666;
+  --text-lighter: #999;
+
+  /* Цвета фона */
+  --bg-color: #f9f9f9;
+  --bg-light: #fff;
+  --bg-dark: #eaeaea;
+
+  /* Цвета границ */
+  --border-color: #ddd;
+  --border-radius: 4px;
+
+  /* Типографика */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-large: 18px;
+  --font-size-xlarge: 24px;
+
+  /* Отступы */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Тени */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Переходы */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+}
