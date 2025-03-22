@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "vite --port 3000 --open",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && touch dist/.nojekyll",
     "build:yarn": "yarn clean && yarn type-check && vite build",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
