@@ -1,12 +1,12 @@
 {
-  "name": "editing",
+  "name": "editing-and-filter",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://backsty.github.io/React-hw-10-Redux_1-editing/",
+  "homepage": "https://backsty.github.io/React-hw-10-Redux_1-editing_and_filter/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/backsty/React-hw-10-Redux_1-editing.git"
+    "url": "git+https://github.com/backsty/React-hw-10-Redux_1-editing_and_filter.git"
   },
   "scripts": {
     "dev": "vite --port 3000 --open",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
+    "lodash.debounce": "^4.0.8",
     "moment": "^2.30.1",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
@@ -40,6 +41,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^22.13.1",
     "@types/prop-types": "^15.7.14",
     "@types/react": "^19.0.8",

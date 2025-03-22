@@ -28,10 +28,27 @@ export interface ItemsState {
   status: 'idle' | 'loading' | 'failed';
 }
 
+// Доступные направления сортировки
+export type SortDirection = 'asc' | 'desc';
+
+// Поля, по которым можно сортировать
+export type SortField = 'name' | 'price';
+
+export interface FilterState {
+  nameFilter: string;
+  sortField: SortField | null;
+  sortDirection: SortDirection;
+  priceRange: {
+    min: number | null;
+    max: number | null;
+  };
+}
+
 /**
  * Интерфейс для корневого состояния приложения в Redux
  */
 export interface RootState {
   items: ItemsState;
   edit: EditState;
+  filter: FilterState;
 }

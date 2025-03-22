@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from 'react';
+import React, { memo, useCallback, ReactElement } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Item, RootState } from '@/types';
 import { deleteItem } from '@/store';
@@ -12,9 +12,31 @@ interface ItemRowProps {
   isEditing: boolean;
 }
 
+// Вспомогательная функция для подсветки совпадений в тексте
+const highlightMatch = (text: string, filter: string): ReactElement => {
+  if (!filter.trim()) return <>{text}</>;
+
+  const parts = text.split(new RegExp(`(${filter})`, 'gi'));
+
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.toLowerCase() === filter.toLowerCase() ? (
+          <mark key={i} className="highlighted-text">
+            {part}
+          </mark>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  );
+};
+
 export const ItemRow: React.FC<ItemRowProps> = memo(({ item, onEdit, isEditing }) => {
   const dispatch = useDispatch();
   const { status } = useSelector((state: RootState) => state.items);
+  const nameFilter = useSelector((state: RootState) => state.filter.nameFilter);
 
   // Просто вызываем родительский обработчик редактирования
   const handleEdit = useCallback(() => {
@@ -28,7 +50,7 @@ export const ItemRow: React.FC<ItemRowProps> = memo(({ item, onEdit, isEditing }
 
   return (
     <tr className={isEditing ? 'editing' : ''}>
-      <td>{item.name}</td>
+      <td>{highlightMatch(item.name, nameFilter)}</td>
       <td>{item.price.toFixed(2)} ₽</td>
       <td className="actions">
         <button
